@@ -153,8 +153,10 @@ public class Run {
                         iterator.remove();
                         success.add(rotation);
                         LOGGER.info(rotation + ": " + "签到成功");
+                        Thread.sleep(1000 * 60 * 5);
                     } else {
                         LOGGER.warn(rotation + ": " + "签到失败");
+                        Thread.sleep(1000 * 60 * 5);
                     }
                 }
                 if (success.size() != followNum) {
